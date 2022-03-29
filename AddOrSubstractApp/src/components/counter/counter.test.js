@@ -6,12 +6,11 @@ import Counter from ".";
 describe('Counter', ()=> {
   it('should increment 1 in the counter', () => {
     render(<Counter 
-      resultLabel="0"
-    />);
+        />);
     // const addButton = screen.queryByText('+');
     const addButton = screen.getByRole('button', {name: '+'})
     fireEvent.click(addButton);
-    expect(screen.queryByRole('resultLabel')).toEqual(1);
+    expect(screen.getByTestId('value')).toEqual(1);
   });
 });
 
