@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import "./index.css"
 
 
 export default function Counter() {
 const [count, setCount] = useState(0);
 
     return (
-      <div className="Counter">
-          <p data-testid="value">{count}</p>
-          <button id="increment" onClick={() => setCount(count +1 )}>+</button>
-          <button id="decrement" onClick={() => setCount(count -1 )}>-</button>
+      <div className="counter">
+          <h1 className="result" data-testid="value">{count}</h1>
+          <button className="increment" onClick={() => setCount(count +1 )}>+</button>
+          <button className="decrement" onClick={() => setCount(count -1 )}>-</button>
       </div>
       
     );
